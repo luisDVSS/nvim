@@ -2,7 +2,6 @@
 -- │            PLUGINS/COLORS.LUA           │
 -- │  Vista previa de colores en el buffer   │
 -- ╰─────────────────────────────────────────╯
-
 return {
   {
     "catgoose/nvim-colorizer.lua",
@@ -31,3 +30,4 @@ return {
     end,
   },
 }
+

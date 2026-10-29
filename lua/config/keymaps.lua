@@ -69,7 +69,10 @@ map("n", "<leader>ww", "<C-w>w", opts("Siguiente ventana"))
 map("n", "<leader>ws", ":sp<CR>", opts("Horizontal Windo Split"))
 map("n", "<leader>wv", ":vsp<CR>", opts("Vertical Window Split"))
 map("n", "<leader>wq", ":q<CR>", opts("Close window"))
+---BUFFERS COMMANDS ----
+map("n", "<leader>bd", ":bd<CR>", opts("Delete Current Buffer"))
 -- REDIMENSIONAR (sigue en <C-flechas>)
+
 map("n", "<C-Up>", ":resize +2<CR>", opts("Aumentar alto"))
 map("n", "<C-Down>", ":resize -2<CR>", opts("Disminuir alto"))
 map("n", "<C-Left>", ":vertical resize -2<CR>", opts("Disminuir ancho"))

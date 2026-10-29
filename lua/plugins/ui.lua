@@ -122,13 +122,27 @@ return {
         sections = {
           lualine_a = { "mode" },
           lualine_b = { "branch", "diff", "diagnostics" },
-          lualine_c = { "filename" },
+          lualine_c = {
+            -- Opciones del componente van DENTRO de su propia tabla.
+            -- path = 1 → ruta relativa al cwd (no solo el nombre).
+            -- shorting_target recorta por la izquierda si es muy larga.
+            {
+              "filename",
+              path            = 1,
+              shorting_target = 40,
+              symbols         = {
+                modified = " ●",
+                readonly = " ",
+                unnamed  = "[Sin nombre]",
+              },
+            },
+          },
           lualine_x = { "encoding", "fileformat", "filetype" },
           lualine_y = { "progress" },
           lualine_z = { "location" },
         },
         inactive_sections = {
-          lualine_c = { "filename" },
+          lualine_c = { { "filename", path = 1, shorting_target = 40 } },
           lualine_x = { "location" },
         },
       })
